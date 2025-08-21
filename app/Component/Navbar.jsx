@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ShoppingCart, Search, Mail, Menu, X } from "lucide-react";
+import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -31,11 +33,10 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.path}
-                className={`text-lg font-medium transition-colors ${
-                  isActive(link.path)
-                    ? "text-[var(--highlight-color)] border-b-2 border-[var(--highlight-color)]"
-                    : "text-gray-700 hover:text-[var(--highlight-color)]"
-                }`}
+                className={`text-lg font-medium transition-colors ${isActive(link.path)
+                  ? "text-[var(--highlight-color)] border-b-2 border-[var(--highlight-color)]"
+                  : "text-gray-700 hover:text-[var(--highlight-color)]"
+                  }`}
               >
                 {link.name}
               </Link>
@@ -47,12 +48,29 @@ const Navbar = () => {
             <Search className="w-5 h-5 cursor-pointer hover:text-[var(--highlight-color)]" />
             <Mail className="w-5 h-5 cursor-pointer hover:text-[var(--highlight-color)]" />
             <ShoppingCart className="w-5 h-5 cursor-pointer hover:text-[var(--highlight-color)]" />
+
+            <SignedOut>
+              <SignInButton>
+                <button className="border-1 border-[var(--highlight-color)] hover:bg-[var(--highlight-color)] text-[var(text-color)] hover:text-white font-medium text-sm sm:text-base h-5 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                  Sign In
+                </button>
+              </SignInButton>
+              <SignUpButton>
+                <button className="bg-[var(--highlight-color)] text-white font-medium text-sm sm:text-base h-5 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                  Sign Up
+                </button>
+              </SignUpButton>
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button onClick={() => setMenuOpen(!menuOpen)}>
-              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {menuOpen ? <X className="w-6 h-6 cursor-pointer" /> : <Menu className="w-6 h-6 cursor-pointer" />}
             </button>
           </div>
         </div>
@@ -66,18 +84,37 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.path}
-                className={`text-lg font-medium ${
-                  isActive(link.path) ? "text-indigo-600" : "text-gray-700"
-                }`}
+                className={`text-lg font-medium ${isActive(link.path) ? "text-indigo-600" : "text-gray-700"
+                  }`}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
-            <div className="flex space-x-6 mt-4">
-              <Search className="w-5 h-5 cursor-pointer hover:text-indigo-600" />
-              <Mail className="w-5 h-5 cursor-pointer hover:text-indigo-600" />
-              <ShoppingCart className="w-5 h-5 cursor-pointer hover:text-indigo-600" />
+            <div className="space-x-6 mt-4">
+              <div>
+                <Search className="w-5 h-5 cursor-pointer hover:text-[var(--highlight-color)]" />
+                <Mail className="w-5 h-5 cursor-pointer hover:text-[var(--highlight-color)]" />
+                <ShoppingCart className="w-5 h-5 cursor-pointer hover:text-[var(--highlight-color)]" />
+
+              </div>
+              <div className="flex">
+                <SignedOut>
+                  <SignInButton>
+                    <button className="border-1 border-[var(--highlight-color)] hover:bg-[var(--highlight-color)] text-[var(text-color)] hover:text-white font-medium text-sm sm:text-base h-5 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                      Sign In
+                    </button>
+                  </SignInButton>
+                  <SignUpButton>
+                    <button className="bg-[var(--highlight-color)] text-white font-medium text-sm sm:text-base h-5 sm:h-12 px-4 sm:px-5 cursor-pointer">
+                      Sign Up
+                    </button>
+                  </SignUpButton>
+                </SignedOut>
+                <SignedIn>
+                  <UserButton />
+                </SignedIn>
+              </div>
             </div>
           </div>
         </div>
