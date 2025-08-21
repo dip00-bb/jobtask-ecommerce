@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --buttons-color: #1e90ff;
-  --text-color: #ffffff;
+  --text-color:#B7E4C7;
+  --button-color:#4eaa7c;
+  --highlight-color:#52B788;
 }

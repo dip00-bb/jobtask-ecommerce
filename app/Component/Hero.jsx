@@ -10,26 +10,26 @@ const Hero = () => {
         {/* Left Side Text */}
         <div className="flex-1 text-center lg:text-left">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
-            Wear Your <span className="text-[#52B788]">Style</span>,  
-            Own Your <span className="text-[#52B788]">Vibe</span>
+            Wear Your <span className="text-[var(--highlight-color)]">Style</span>,  
+            Own Your <span className="text-[var(--highlight-color)]">Vibe</span>
           </h1>
-          <p className="mt-6 text-lg text-gray-600 max-w-md mx-auto lg:mx-0">
+          <p className="mt-6 text-lg text-gray-600 max-w-md mx-auto lg:mx-0 font-bold">
             Discover premium T-shirts designed for comfort and confidence.  
             Shop the latest collections and upgrade your wardrobe today!
           </p>
 
-          {/* CTA Buttons */}
+
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="px-6 py-3 bg-[#74C69D] text-white font-semibold hover:bg-[#74C69D] transition">
+            <button className="px-6 py-3 bg-[var(--button-color)] text-white font-semibold hover:bg-[#4c9671] cursor-pointer transition">
               Shop Now
             </button>
-            <button className="px-6 py-3 border border-[#52B788] text-[#52B788] font-semibold hover:bg-[#74C69D] hover:text-white cursor-pointer transition">
+            <button className="px-6 py-3 border border-[var(--button-color)] text-[var(--button-color)] font-semibold hover:bg-[#74C69D] hover:text-white cursor-pointer transition">
               Explore Collection
             </button>
           </div>
         </div>
 
-        {/* Right Side Image */}
+
         <div className="flex-1 flex justify-center">
           <Image
             src={allImages.bannerImg}

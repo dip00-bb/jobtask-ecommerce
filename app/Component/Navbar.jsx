@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="max-w-9/11 mx-auto px-4 ">
         <div className="flex justify-between h-16 items-center">
           {/* Website Name */}
-          <div className="text-2xl font-bold text-indigo-600">AURA</div>
+          <div className="text-2xl font-bold text-[var(--highlight-color)]">AURA</div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex space-x-16">
@@ -33,8 +33,8 @@ const Navbar = () => {
                 href={link.path}
                 className={`text-lg font-medium transition-colors ${
                   isActive(link.path)
-                    ? "text-indigo-600 border-b-2 border-indigo-600"
-                    : "text-gray-700 hover:text-indigo-600"
+                    ? "text-[var(--highlight-color)] border-b-2 border-[var(--highlight-color)]"
+                    : "text-gray-700 hover:text-[var(--highlight-color)]"
                 }`}
               >
                 {link.name}
@@ -44,9 +44,9 @@ const Navbar = () => {
 
           {/* Right Side Icons */}
           <div className="hidden md:flex space-x-6 items-center">
-            <Search className="w-5 h-5 cursor-pointer hover:text-indigo-600" />
-            <Mail className="w-5 h-5 cursor-pointer hover:text-indigo-600" />
-            <ShoppingCart className="w-5 h-5 cursor-pointer hover:text-indigo-600" />
+            <Search className="w-5 h-5 cursor-pointer hover:text-[var(--highlight-color)]" />
+            <Mail className="w-5 h-5 cursor-pointer hover:text-[var(--highlight-color)]" />
+            <ShoppingCart className="w-5 h-5 cursor-pointer hover:text-[var(--highlight-color)]" />
           </div>
 
           {/* Mobile Menu Button */}
