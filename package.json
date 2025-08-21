@@ -11,7 +11,9 @@
   "dependencies": {
     "@clerk/nextjs": "^6.31.3",
     "lucide-react": "^0.540.0",
+    "mongodb": "^6.18.0",
     "next": "15.5.0",
+    "next-cloudinary": "^6.16.0",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
