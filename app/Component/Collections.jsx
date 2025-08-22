@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const CTA = () => {
@@ -11,12 +12,12 @@ const CTA = () => {
           Shop our latest collection today and bring comfort & style into your everyday look.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-6 py-3 text-white bg-[var(--button-color)] font-semibold cursor-pointer transition shadow-md">
+          <Link href='/all-products' className="px-6 py-3 text-white bg-[var(--button-color)] font-semibold cursor-pointer transition shadow-md">
             Shop Now
-          </button>
-          <button className="px-6 py-3 border border-[var(--button-color)] text-[var(--highlight-color)] font-semibold hover:text-white hover:bg-[var(--highlight-color)] cursor-pointer transition shadow-md">
+          </Link>
+          <Link href='/all-products' className="px-6 py-3 border border-[var(--button-color)] text-[var(--highlight-color)] font-semibold hover:text-white hover:bg-[var(--highlight-color)] cursor-pointer transition shadow-md">
             Explore Collection
-          </button>
+          </Link>
         </div>
       </div>
     </section>

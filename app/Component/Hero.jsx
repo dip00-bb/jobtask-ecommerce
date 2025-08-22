@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import React from 'react';
 import { allImages } from '../assets/asset';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
     <section className="bg-white">
-      <div className="max-w-9/10 mx-auto px-3 lg:px-3 flex flex-col-reverse lg:flex-row-reverse items-center gap-5 py-10 ">
+      <div className="max-w-9/11 mx-auto px-3 lg:px-3 flex flex-col-reverse lg:flex-row-reverse items-center gap-5 py-10 ">
         
         {/* Left Side Text */}
         <div className="flex-1 text-center lg:text-left">
@@ -20,12 +21,12 @@ const Hero = () => {
 
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="px-6 py-3 bg-[var(--button-color)] text-white font-semibold hover:bg-[#4c9671] cursor-pointer transition">
+            <Link href='/all-products' className="px-6 py-3 bg-[var(--button-color)] text-white font-semibold hover:bg-[#4c9671] cursor-pointer transition">
               Shop Now
-            </button>
-            <button className="px-6 py-3 border border-[var(--button-color)] text-[var(--button-color)] font-semibold hover:bg-[#74C69D] hover:text-white cursor-pointer transition">
+            </Link>
+            <Link href='/all-products' className="px-6 py-3 border border-[var(--button-color)] text-[var(--button-color)] font-semibold hover:bg-[#74C69D] hover:text-white cursor-pointer transition">
               Explore Collection
-            </button>
+            </Link>
           </div>
         </div>
 
