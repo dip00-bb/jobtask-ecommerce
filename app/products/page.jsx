@@ -8,7 +8,7 @@ import axiosPublic from "../Hooks/useAxiosPublic";
 
 const ProductsPage = () => {
     const [products, setProducts] = useState([]);
-
+    
     useEffect(() => {
         const fetchProducts = async () => {
             try {

@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛍️ Next.js Product App
 
-## Getting Started
+A simple **Next.js 15 full-stack app** with authentication, product listing, and protected dashboard features. Built using **NextAuth.js**, **App Router**, and API routes for backend operations.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+1. **Landing Page (/**)  
+   - Includes Navbar, Hero, Product Highlights, Footer  
+   - Navigation to login and products  
+   - Publicly accessible  
+
+2. **Login (/login)**  
+   - Authentication with NextAuth (Google or credentials)  
+   - Redirects to `/products` after login  
+
+3. **Product List (/products)**  
+   - Publicly accessible  
+   - Fetches and displays product list (from mock backend/file)  
+   - Each product shows: name, description, price, and details button  
+
+4. **Product Details (/products/[id])**  
+   - Publicly accessible  
+   - Displays full product details  
+
+5. **Add Product (/dashboard/add-product)**  
+   - Protected route (only logged-in users can access)  
+   - Form to add a new product (saved in database/mock backend)  
+   - Redirects unauthenticated users to `/login`  
+
+---
+
+## ⚡ Optional Enhancements
+- Loading spinner while submitting forms  
+- Toast notifications for successful actions  
+- Theme toggle (light/dark)  
+
+---
+
+## 🛠️ Tech Stack
+- **Next.js 15** (App Router)  
+- **NextAuth.js** for authentication  
+- **Route Handlers (/api)** for backend (or Express.js alternative)  
+- **Tailwind CSS** for styling (optional but recommended)  
+
+---
+
+## 📦 Installation & Setup
 
 ```bash
+# Clone the repo
+git clone https://github.com/dip00-bb/jobtask-ecommerce
+
+# Move into project directory
+cd jobtask-ecommerce
+
+# Install dependencies
+npm install
+
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
