@@ -6,6 +6,7 @@ import Image from "next/image";
 import axiosPublic from "@/app/Hooks/useAxiosPublic";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import Loading from "@/app/loading";
 
 const ProductDetailsPage = () => {
   const { id } = useParams();
@@ -23,7 +24,7 @@ const ProductDetailsPage = () => {
     fetchProduct();
   }, [id]);
 
-  if (!product) return <p className="text-center mt-10">Loading...</p>;
+  if (!product) return <div className="text-center mt-10"><Loading/></div>;
 
   // Discount price calculation
   const discountedPrice =
