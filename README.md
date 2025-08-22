@@ -61,3 +61,18 @@ npm install
 
 # Run the development server
 npm run dev
+
+# project will run on 
+
+http://localhost:3000
+
+
+🚀
+
+📑 Routes Summary
+Route	Description	Access
+/	Landing Page (Navbar, Hero, Highlights, Footer)	Public
+/login	User login (NextAuth)	Public
+/products	Product list	Public
+/products/[id]	Product details	Public
+/dashboard/add-product	Add new product form	Protected (login required)
