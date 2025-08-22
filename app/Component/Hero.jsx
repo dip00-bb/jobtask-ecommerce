@@ -5,7 +5,7 @@ import { allImages } from '../assets/asset';
 const Hero = () => {
   return (
     <section className="bg-white">
-      <div className="max-w-9/11 mx-auto px-3 lg:px-3 flex flex-col-reverse lg:flex-row-reverse items-center gap-5 py-10 ">
+      <div className="max-w-9/10 mx-auto px-3 lg:px-3 flex flex-col-reverse lg:flex-row-reverse items-center gap-5 py-10 ">
         
         {/* Left Side Text */}
         <div className="flex-1 text-center lg:text-left">

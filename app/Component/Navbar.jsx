@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md static top-0 left-0 w-full z-50">
-      <div className="max-w-9/11 mx-auto px-4 ">
+      <div className="max-w-9/10 mx-auto px-4 ">
         <div className="flex justify-between h-16 items-center">
           {/* Website Name */}
           <div className="text-2xl font-bold text-[var(--highlight-color)]">AURA</div>
